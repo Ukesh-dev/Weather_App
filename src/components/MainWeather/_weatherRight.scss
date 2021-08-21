@@ -1,0 +1,10 @@
+.main__right {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 4, 40, 0),
+    rgba(0, 78, 146, 0)
+  );
+  padding: 0 0 0 3rem;
+  flex-basis: 40%;
+  overflow-y: scroll;
+}

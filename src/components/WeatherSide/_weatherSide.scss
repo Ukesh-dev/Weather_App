@@ -1,0 +1,141 @@
+.main__left {
+  flex-basis: 60%;
+  background: url(../../images/sky-1107579_1920.jpg);
+  background-size: cover;
+  // flex-shrink: 0;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 3rem 6rem;
+  @include breakpoint-up(medium) {
+    flex-basis: 60%;
+  }
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .weather__report {
+    display: flex;
+    // align-items: center;
+
+    span {
+      font-size: 5rem;
+      color: #fff;
+      // letter-spacing: 0.15em;
+      text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c,
+        0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424,
+        0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e;
+
+      sup {
+        font-size: 2rem;
+        color: #fff;
+        // background-color: #e7e5e4;
+        letter-spacing: 0.15em;
+        text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c,
+          0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626;
+      }
+
+      &__sign {
+        font-size: 3.5rem;
+        position: relative;
+        top: -2rem;
+        right: 0;
+      }
+    }
+  }
+
+  .weather__desc {
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-end;
+    display: inline-block;
+    margin: 2.5rem 0 0 0.8rem;
+    // width: 50%; //margin-right: 0.3rem;
+    h1 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    span {
+      margin-right: 0.4rem;
+      font-size: 0.9rem;
+      color: #fff;
+      // background-color: #e7e5e4;
+      letter-spacing: 0.15em;
+      text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c,
+        0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626;
+    }
+  }
+  .weather__icon {
+    margin-left: 0.6rem;
+    // width: 3rem;
+    margin-top: 1rem;
+    max-width: 5rem;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      justify-self: flex-start;
+      object-fit: contain;
+    }
+
+    .weather__type {
+      font-size: 0.9rem;
+      color: #fff;
+      // background-color: #e7e5e4;
+      letter-spacing: 0.15em;
+      text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c,
+        0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626;
+    }
+  }
+}
+
+.main__left.thunder {
+  // transform: scale(1.8);
+  background-image: url("../../images/thunderstorm-3417042_1920.jpg");
+}
+.main__left.rain {
+  background-image: url("../../images/1088351-rain.webp");
+}
+.main__left.cloud {
+  background-image: url("../../images/sky-1107579_1920.jpg");
+}
+.main__left.sun {
+  background-image: url("../../images/pexels-bruno-scramgnon-585759.jpg");
+  color: black;
+}
+.main__left.snow {
+  background-image: url("../../images/wintry-2993370_1920.jpg");
+}
+.main__left.mist {
+  background-image: url("../../images/hills-615429_1920.jpg");
+}
+
+h1 {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+    "AppleGothic", sans-serif;
+  // font-size: 92px;
+  // padding: 80px 50px;
+  // text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+
+  &.elegantshadow,
+  span {
+    color: #fff;
+    // background-color: #e7e5e4;
+    letter-spacing: 0.15em;
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c,
+      0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424,
+      0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e;
+  }
+}
