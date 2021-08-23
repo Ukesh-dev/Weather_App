@@ -1,14 +1,20 @@
 .main__left {
-  flex-basis: 60%;
+  flex-basis: 70%;
   background: url(../../images/sky-1107579_1920.jpg);
   background-size: cover;
   // flex-shrink: 0;
   color: #fff;
   display: flex;
   align-items: flex-end;
-  padding: 0 3rem 6rem;
-  @include breakpoint-up(medium) {
-    flex-basis: 60%;
+  padding: 0 0rem 6rem 2rem;
+  @include breakpoint-down(medium) {
+    padding: 12rem 0 0 3rem;
+  }
+  @include breakpoint-down(small) {
+    padding: 5rem 3rem;
+    padding-top: 4rem;
+    align-items: center;
+    justify-content: center;
   }
   h1,
   h2,
@@ -16,15 +22,32 @@
     margin: 0;
   }
   h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    @include breakpoint-down(medium) {
+      font-size: 2.5rem;
+    }
   }
 
   .weather__report {
     display: flex;
+
+    @include breakpoint-down(small) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      // margin: 0 auto;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
     // align-items: center;
 
     span {
       font-size: 5rem;
+      @include breakpoint-down(medium) {
+        font-size: 3rem;
+        text-align: center;
+        flex-basis: 20%;
+      }
       color: #fff;
       // letter-spacing: 0.15em;
       text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c,
@@ -55,6 +78,11 @@
     // justify-content: flex-end;
     display: inline-block;
     margin: 2.5rem 0 0 0.8rem;
+
+    @include breakpoint-down(medium) {
+      flex-basis: 45%;
+      margin: 0 0 0 0.8rem;
+    }
     // width: 50%; //margin-right: 0.3rem;
     h1 {
       white-space: nowrap;
@@ -63,7 +91,7 @@
     }
     span {
       margin-right: 0.4rem;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: #fff;
       // background-color: #e7e5e4;
       letter-spacing: 0.15em;
@@ -80,12 +108,18 @@
     flex-direction: column;
     // justify-content: center;
     align-items: center;
+    justify-content: center;
+
+    @include breakpoint-down(medium) {
+      margin-top: 0;
+      flex-basis: 20%;
+    }
 
     img {
       width: 100%;
-      height: auto;
+      height: 30%;
       justify-self: flex-start;
-      object-fit: contain;
+      object-fit: cover;
     }
 
     .weather__type {
@@ -105,6 +139,7 @@
 }
 .main__left.rain {
   background-image: url("../../images/1088351-rain.webp");
+  // background-size: cover;
 }
 .main__left.cloud {
   background-image: url("../../images/sky-1107579_1920.jpg");

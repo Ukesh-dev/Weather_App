@@ -82,7 +82,7 @@ function Search() {
         <div className="weather__form" ref={formContainer}>
    <form onSubmit ={(e)=> {handleSubmit(e); setmodalOpen(false)}}  >
        <div className="input__field">
-            <input type="text" name="weather" onFocus={(e)=> showResults(e.target.value)}id="weather" onChange={(e) => {
+            <input type="text" name="weather" placeholder="country or city name" spellCheck ="false" onFocus={(e)=> showResults(e.target.value)}id="weather" onChange={(e) => {
                 showResults(e.target.value)
             }}  value = {searchValue}/>
             <div className="underline"></div>

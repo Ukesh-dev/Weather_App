@@ -9,7 +9,7 @@
   background-image: url(../../images/sky-1107579_1920.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   transform: scale(1.8);
 }
 .wrapper {
@@ -37,9 +37,15 @@
   background-image: url("../../images/hills-615429_1920.jpg");
 }
 .main {
+  position: relative;
   height: 40vw;
   max-height: 590px;
   width: 80vw;
   background: rgba(0, 0, 0, 0.8);
   display: flex;
+
+  @include breakpoint-down(medium) {
+    flex-direction: column;
+    height: auto;
+  }
 }

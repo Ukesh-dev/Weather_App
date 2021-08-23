@@ -16,7 +16,7 @@ const API_key =  'f4e3f8f90248bd4a9889c78eb2b123b3';
     //    console.log(time);
        let fullDate = time;
        let day = moment(newdt).format("ddd");
-       let time_min = moment(newdt).format("ddd LT");
+       let time_min = moment(newdt).format("LT");
        return {fullDate, day, time_min};
     }
 
@@ -48,7 +48,7 @@ export const AppProvider = ({children})=> {
 
     // console.log(dt, temp,icon, main, name)
 //    convertDate(dt);o
-        setWeatherInfo({date: convertDate(dt).fullDate, temp, icon, name, main, sunrise: convertDate(sunrise).time_min, sunset : convertDate(sunset).time_min, humidity, pressure});
+        setWeatherInfo({date: convertDate(dt).fullDate, temp, icon, name, main, sunrise: convertDate(sunrise).time_min, sunset : convertDate(sunset).time_min,sunrise_day: convertDate(sunrise).day, sunset_day: convertDate(sunset).day, humidity, pressure});
         
         const oneCall =  await instance.get(`onecall?lat=${lat}&lon=${lon}&exclude=current, minutely, hourly, alerts&appid=${API_key}`)
         // console.log(oneCall.data.daily)
@@ -111,7 +111,7 @@ export const AppProvider = ({children})=> {
         // console.log(main)
         // console.log(dt, temp,icon, main, name)
         // dt && convertDate(dt);
-        setWeatherInfo({ humidity, pressure, sunrise:convertDate(sunrise).time_min, sunset:convertDate(sunset).time_min,  date: convertDate(dt).fullDate, temp, icon, name, main});
+        setWeatherInfo({ humidity, pressure, sunrise:convertDate(sunrise).time_min, sunrise_day: convertDate(sunrise).day, sunset_day: convertDate(sunset).day, sunset:convertDate(sunset).time_min,  date: convertDate(dt).fullDate, temp, icon, name, main});
         console.log(weatherInfo);
         const oneCall =  await instance.get(`onecall?lat=${lat}&lon=${lon}&exclude=current, minutely, hourly, alerts&appid=${API_key}`)
         // console.log(oneCall.data.daily)

@@ -1,0 +1,61 @@
+.dailyReport {
+  //   background: red;
+
+  // display: flex;
+  transform: translateX(-50px);
+  // overflow-x: scroll;
+  width: 115%;
+  max-height: 167px;
+
+  @include breakpoint-down(small) {
+    margin-left: 2rem !important;
+  }
+  // padding: 0 0 0 3rem;
+  // margin-left: 2rem;
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+  // .swiper-wrapper {
+  //   width: 33%;
+  // }
+
+  .swiper-slide:nth-child(1) {
+    padding-left: 0.5rem;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    // height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+
+    // @include breakpoint-down(medium) {
+    //   width: 15%;
+    // }
+    // @include breakpoint-down(small) {
+    //   width: 26%;
+    // }
+    &--date {
+      @include breakpoint-down(medium) {
+        padding-top: 0.5rem;
+      }
+    }
+
+    &--icon {
+      // margin-bottom: 0.3rem;
+      //   flex-basis: 20%;
+      margin-top: -1rem;
+      // height: 38%;
+      img {
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
+      }
+    }
+    &--temp {
+      margin-top: -2rem;
+    }
+  }
+}

@@ -7,6 +7,11 @@ form {
   flex-direction: row;
   height: 70px;
   justify-content: space-between;
+
+  @include breakpoint-down(medium) {
+    height: 44px;
+    justify-content: center;
+  }
 }
 
 .input__field {
@@ -25,13 +30,27 @@ input {
   align-self: flex-end;
   outline: none;
   color: #fff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.2rem;
   border-bottom: 3px solid rgba(255, 255, 255, 0.3);
-
+  @include breakpoint-down(medium) {
+    border-bottom: 3px solid rgba(250, 18, 18, 0.3);
+  }
   &:focus ~ .underline {
     transform: scale(1);
     background: rgba(255, 255, 255, 0.5);
+    @include breakpoint-down(medium) {
+      border-bottom: 3px solid rgba(250, 18, 18, 0.9);
+    }
   }
 }
+// @include breakpoint-down(medium) {
+//   input[type="text"] {
+//     color: rgba(129, 66, 66, 0.9);
+//     font-weight: bold;
+//     font-size: 1.6rem;
+//   }
+// }
 
 .underline {
   position: absolute;
@@ -53,6 +72,9 @@ button {
   background: rgb(255, 51, 0);
   outline: none;
   border: none;
+  @include breakpoint-down(medium) {
+    height: 46px;
+  }
 
   &:hover {
     filter: brightness(2);
@@ -73,6 +95,27 @@ button svg {
 
 .weather__form {
   position: relative;
+  @include breakpoint-down(medium) {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    padding-top: 0.5rem;
+    transform: translateX(-50%);
+    max-width: 390px;
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 4, 40, 0),
+      rgba(0, 78, 146, 0)
+    );
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    // background-color: red;
+    // nd-color: green;
+    @include breakpoint-down(small) {
+      top: 0;
+    }
+  }
 }
 
 .weather__searchItems {
@@ -83,6 +126,12 @@ button svg {
   min-width: 260px;
   overflow: scroll;
   z-index: 999;
+
+  @include breakpoint-down(medium) {
+    left: 10px;
+    min-width: 200px;
+    width: 87%;
+  }
 }
 .weather__searchItems::-webkit-scrollbar {
   display: none;

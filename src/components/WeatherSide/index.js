@@ -28,7 +28,7 @@ function WeatherSide() {
                     {/* <span className="degree__sign">&#176;</span> */}
                 {/* </div> */}
                 <div className="weather__desc">
-                    <h1 className = "elegantshadow">{name}</h1>
+                    <h1 className = "elegantshadow">{ name && name.length > 8 ? `${name.substr(0, 8)}..` : name }</h1>
                     {/* <span className="time">6:09</span>
                     <span className="day">Monday</span>
                     <span className="date">9</span>
